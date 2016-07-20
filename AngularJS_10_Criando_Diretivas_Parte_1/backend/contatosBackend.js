@@ -1,8 +1,21 @@
 var express = require('express');
+
+//refactoring because Bodyparder is deprecated in express 4.0
+// Uncomment line below with express 4.0
+// var bodyParser = require('body-parser');
+
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
+
+// Comment this line with express 4.0
 app.use(express.bodyParser());
+
+// Bodyparder is deprecated in express 4.0
+// Uncomment line below with express 4.0
+// app.use(bodyParser.urlencoded({ extended: true }));
+// Uncomment line below with express 4.0
+// app.use(bodyParser.json()); // Uncomment this lines with express 4.0
 
 var contatos = [
 	{nome: "Bruno", telefone: "9999-2222", data: new Date(), operadora: {nome: "Oi", codigo: 14, categoria: "Celular"}},
