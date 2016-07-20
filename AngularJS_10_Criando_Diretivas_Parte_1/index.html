@@ -24,12 +24,12 @@
     <h3>{{app}}</h3>
 
     Scope: {{$id}}
-    <ui-alert title="Ops, aconteceu um problema!">
+    <ui-alert title="Ops, aconteceu um problema!" ng-show="error">
         <p>Scope: {{$id}}</p>
-        Não foi possível entrotar os dados!!!
+        {{error}}
     </ui-alert>
 
-    <ui-alert title="Série sobre Angular">
+    <ui-alert title="Série sobre Angular" ng-if="error">
         <p>Scope: {{$id}}</p>
         Episódio10 - Criando Diretivas - Parte 1
     </ui-alert>

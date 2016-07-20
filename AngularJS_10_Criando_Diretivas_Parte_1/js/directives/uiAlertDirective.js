@@ -7,10 +7,11 @@ angular.module("listaTelefonica").directive("uiAlert", function () {
         templateUrl: "view/alert.html",
         replace: true,
         restrict: "AE",
+        //ao declarar scope criamos um novo Scope e perdemos acesso ao Scope principal
         scope: {
             topic: "@title",  //vinculo com o title do  <ui-alert>
-            message: "=message"  //vinculo bidirecional com o message do  <ui-alert>
+            // message: "=message"  //vinculo bidirecional com o message do  <ui-alert>
         },
-        transclude: true
+        transclude: true //para encapsular conteudo
     };
 });
