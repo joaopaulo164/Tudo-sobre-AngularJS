@@ -8,10 +8,13 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     $scope.contatos = [];
     $scope.operadoras = [];
 
-//    Testa fomatação de dada de milessegundos para um padrão determinado em uiDate.
+//    Testa fomatação de dada de milessegundos para um padrão determinado em uiDate. Ex: 11/11/1111
+//    Testa fomatação do telefone o padrão determinado em uiDate. Ex. (99) 9999-9999
+
 /*
 
     $scope.contato = {
+        telefone: 1234567890,
         data: 946692000000
     };
 */
