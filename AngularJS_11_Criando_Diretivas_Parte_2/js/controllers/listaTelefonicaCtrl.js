@@ -8,11 +8,20 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     $scope.contatos = [];
     $scope.operadoras = [];
 
+//    Testa fomataÃ§Ã£o de dada de milessegundos para um padrÃ£o determinado em uiDate.
+/*
+
+    $scope.contato = {
+        data: 946692000000
+    };
+*/
+
+
     var carregarContatos = function () {
         contatosAPI.getContatos().success(function (data) {
             $scope.contatos = data;
         }).error(function (data, status) {
-            $scope.error = "Não foi possível carregar os dados!";
+            $scope.error = "Nï¿½o foi possï¿½vel carregar os dados!";
         });
     };
 
